@@ -158,18 +158,20 @@ fig_world = px.choropleth(
 )
 st.plotly_chart(fig_world, use_container_width=True)
 
+
+
+# Agregasi penjualan per State (misal hanya untuk US)
+usa_df = filtered_df[filtered_df['Country'] == 'United States']
+
 # Penjualan per State (State)
-if 'State' in filtered_df.columns and filtered_df['State'].notna().any():
-    city_sales = filtered_df.groupby('State')['TotalAmount'].sum().sort_values(ascending=False).head(20).reset_index()
+if 'State' in usa_df.columns and usa_df['State'].notna().any():
+    state_sales = usa_df.groupby('State')['TotalAmount'].sum().sort_values(ascending=False).head(20).reset_index()
     fig6 = px.bar(state_sales, x='State', y='TotalAmount',
                   title='🏙️ Top 20 Penjualan per State',
                   labels={'TotalAmount': 'Total Penjualan ($)'})
     st.plotly_chart(fig6, use_container_width=True)
 else:
     st.warning("Kolom 'State' kosong atau tidak tersedia dalam data.")
-
-# Agregasi penjualan per State (misal hanya untuk US)
-usa_df = filtered_df[filtered_df['Country'] == 'United States']
 
 if 'State' in usa_df.columns and usa_df['State'].notna().any():
     state_sales = (
