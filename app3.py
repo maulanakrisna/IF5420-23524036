@@ -136,6 +136,25 @@ if 'Country' in filtered_df.columns and filtered_df['Country'].notna().any():
     st.plotly_chart(fig7, use_container_width=True)
 
 
+
+# Agregasi penjualan per negara
+country_sales_map = (
+    filtered_df.groupby('Country')['TotalAmount']
+    .sum()
+    .reset_index()
+)
+
+# Visualisasi peta dunia (Choropleth)
+fig_world = px.choropleth(
+    country_sales_map,
+    locations='Country',
+    locationmode='country names',
+    color='TotalAmount',
+    color_continuous_scale='Blues',
+    title='🌍 Penjualan per Negara (World Map)',
+    labels={'TotalAmount': 'Total Penjualan ($)'}
+)
+st.plotly_chart(fig_world, use_container_width=True)
 # # Penjualan per Negara
 # country_sales = filtered_df.groupby('Country')['TotalAmount'].sum().reset_index()
 # fig4 = px.bar(country_sales, x='Country', y='TotalAmount', title='🌍 Penjualan per Negara')
