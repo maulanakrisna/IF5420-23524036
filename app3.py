@@ -111,7 +111,6 @@ fig5 = px.bar(top_products, x='TotalAmount', y='ProductCategory', orientation='h
               labels={'ProductCategory': 'ID Produk', 'TotalAmount': 'Total Penjualan ($)'})
 st.plotly_chart(fig5, use_container_width=True)
 
-
 # Distribusi berdasarkan Gender
 gender_sales = filtered_df.groupby('Gender')['TotalAmount'].sum().reset_index()
 fig3 = px.bar(gender_sales, x='Gender', y='TotalAmount', title='👤 Penjualan berdasarkan Gender')
@@ -124,10 +123,6 @@ if 'City' in filtered_df.columns and filtered_df['City'].notna().any():
                   title='🏙️ Top 20 Penjualan per Kota',
                   labels={'TotalAmount': 'Total Penjualan ($)'})
     st.plotly_chart(fig6, use_container_width=True)
-else:
-    st.warning("Kolom 'City' kosong atau tidak tersedia dalam data.")
-
-
 
 # Penjualan per Negara (Country)
 if 'Country' in filtered_df.columns and filtered_df['Country'].notna().any():
@@ -136,8 +131,6 @@ if 'Country' in filtered_df.columns and filtered_df['Country'].notna().any():
                   title='🌍 Top 20 Penjualan per Negara',
                   labels={'TotalAmount': 'Total Penjualan ($)'})
     st.plotly_chart(fig7, use_container_width=True)
-
-
 
 # Agregasi penjualan per negara
 country_sales_map = (
@@ -157,8 +150,6 @@ fig_world = px.choropleth(
     labels={'TotalAmount': 'Total Penjualan ($)'}
 )
 st.plotly_chart(fig_world, use_container_width=True)
-
-
 
 # Agregasi penjualan per State (misal hanya untuk US)
 usa_df = filtered_df[filtered_df['Country'] == 'United States']
