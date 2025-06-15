@@ -6,7 +6,8 @@ Visualisasi interaktif data penjualan ritel berbasis **data warehouse** yang men
 
 ## 🚀 Live App
 
-🔗 [Buka Dashboard di Streamlit Cloud]([(https://if5420-23524036-15062025.streamlit.app/])
+🔗 [Buka Dashboard di Streamlit Cloud]
+[https://if5420-23524036-15062025.streamlit.app/]
 
 ---
 
