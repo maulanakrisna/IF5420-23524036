@@ -170,8 +170,6 @@ if 'State' in usa_df.columns and usa_df['State'].notna().any():
                   title='🏙️ Top 20 Penjualan per State',
                   labels={'TotalAmount': 'Total Penjualan ($)'})
     st.plotly_chart(fig6, use_container_width=True)
-else:
-    st.warning("Kolom 'State' kosong atau tidak tersedia dalam data.")
 
 if 'State' in usa_df.columns and usa_df['State'].notna().any():
     state_sales = (
