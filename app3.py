@@ -89,8 +89,8 @@ if not filtered_df.empty:
     top_category = filtered_df.groupby('ProductCategory')['TotalAmount'].sum().idxmax()
     top_category_value = filtered_df.groupby('ProductCategory')['TotalAmount'].sum().max()
     col4.metric("Kategori Terlaris", top_category, f"${top_category_value:,.2f}")
-else:
-    col4.metric("Kategori Terlaris", "Data tidak tersedia", "")
+# else:
+#     col4.metric("Kategori Terlaris", "Data tidak tersedia", "")
 
 # Penjualan per Bulan
 monthly_sales = filtered_df.groupby('Month')['TotalAmount'].sum().reset_index()
