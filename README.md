@@ -13,9 +13,11 @@ Visualisasi interaktif data penjualan ritel berbasis **data warehouse** yang men
 
 ## 📁 Struktur Dataset
 
-Dataset: https://github.com/amir-hojjati/Data-Analysis-Online-Retail-Transactions/blob/master/Original-Dataset/Online%20Retail.csv
-Dataset: https://www.kaggle.com/datasets/fahadrehman07/retail-transaction-dataset
-Dataset: https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
+Dataset1: https://github.com/amir-hojjati/Data-Analysis-Online-Retail-Transactions/blob/master/Original-Dataset/Online%20Retail.csv
+
+Dataset2: https://www.kaggle.com/datasets/fahadrehman07/retail-transaction-dataset
+
+Dataset3: https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
 
 Dashboard menggunakan data warehouse dengan skema dimensional
 Loaded_Fact_Sales.csv terdiri dari join table berikut:
