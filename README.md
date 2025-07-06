@@ -39,3 +39,5 @@ Loaded_Fact_Sales.csv terdiri dari join table berikut:
   - Tahun
   - Kategori Produk
   - Lokasi (Negara)
+ 
+Dengan bantuan OpenAI ChatGPT untuk dokumentasi & boilerplate.
